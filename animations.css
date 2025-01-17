@@ -1,0 +1,36 @@
+.btn-fill {
+    position:relative;
+    background:none;
+    border-color: #005b8d11;
+    z-index: 1;
+  }
+  .btn-fill:hover{
+    color: black;      
+  }
+  .btn-fill:before {
+    position:absolute;
+    content: "";
+    background-color: white;
+    top:0; bottom:0; left:0; right:100%;
+    transition: right 0.4s ease-in-out; 
+    z-index: -1;    
+  } 
+
+  .btn-fill:hover:before {
+    position:absolute;
+    right:0;        
+  }
+@keyframes fade-in-bot-fr {
+    0% {
+        opacity: 0;
+        transform: translateY(12%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-bot {
+    animation: fade-in-bot-fr 0.5s ease-out forwards;
+}

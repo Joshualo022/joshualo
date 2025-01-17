@@ -5,6 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
+    <link href="animations.css" rel="stylesheet">
 
     <title>Joshua's Portfolio</title>
 
@@ -31,28 +32,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-      }
-      .btn-fill {
-        position:relative;
-        background:none;
-        border-color: #005b8d11;
-        z-index: 1;
-      }
-      .btn-fill:hover{
-        color: black;      
-      }
-      .btn-fill:before {
-        position:absolute;
-        content: "";
-        background-color: white;
-        top:0; bottom:0; left:0; right:100%;
-        transition: right 0.4s ease-in-out; 
-        z-index: -1;    
-      } 
-
-      .btn-fill:hover:before {
-        position:absolute;
-        right:0;        
       }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -87,19 +66,19 @@
         </div>
       </nav>
 
-    <div class="container p-4 m-3" style="background-color: rgba(0,100,150,0.2)">
+    <div class="container p-4 m-3  fade-in-bot" style="background-color: rgba(0,100,150,0.2)">
        <h2>Fall 2024, ongoing...</h2>
        <h1>Acct4</h1>
        <p>Attendance website for all sorts of organizations. Powered by QR code technology.</p>
        <div class="d-flex"><a href="#" class="btn btn-fill" style="border-radius:0;">Learn more</a></div>
     </div>
-    <div class="container p-4 m-3" style="background-color: rgba(0,100,150,0.2)">
+    <div class="container p-4 m-3 fade-in-bot" style="background-color: rgba(0,100,150,0.2)">
       <h2>Spring 2024</h2>
       <h1>Pixodrip</h1>
       <p>Open canvas with digital brush manipulating hue, saturation, and brightness. Create unique and abstract masterpieces.</p>
       <div class="d-flex"><a href="#" class="btn btn-fill" style="border-radius:0;">Learn more</a></div>
    </div>
-   <div class="container p-4 m-3" style="background-color: rgba(0,100,150,0.2)">
+   <div class="container p-4 m-3 fade-in-bot" style="background-color: rgba(0,100,150,0.2)">
     <h2>Fall 2021</h2>
     <h1>Textsweeper</h1>
     <p>Intro project for python. Text based minesweeper created by freshman me!</p>
