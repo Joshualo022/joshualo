@@ -1,7 +1,8 @@
 .btn-fill {
     position:relative;
     background:none;
-    border-color: #005b8d11;
+    border-width:2px;
+    border-color: red;
     z-index: 1;
   }
   .btn-fill:hover{
