@@ -1,15 +1,16 @@
 .btn-fill {
-    position:relative;
-    background:none;
-    border-width:2px;
-    border-color: red;
-    z-index: 1;
-  }
-  .btn-fill:hover{
-    color: black;      
-  }
-  .btn-fill:before {
-    position:absolute;
+  position:relative;
+  background-color: lightblue !important;
+  border-width:2px;
+  border-color: black;
+  border-radius: 0 !important;
+  z-index: 1;
+}
+.btn-fill:hover {
+  color: black;      
+}
+.btn-fill:before {
+  position:absolute;
     content: "";
     background-color: white;
     top:0; bottom:0; left:0; right:100%;
