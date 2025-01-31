@@ -15,8 +15,9 @@ h1 {
     h4 {
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
-        letter-spacing: 5.2px;
+        letter-spacing: 5px;
         font-weight: bold;
+        text-transform: uppercase;
     }
   body {
     background-image: url('https://i.ibb.co/nLCK5NX/joshualome-bg.png');
