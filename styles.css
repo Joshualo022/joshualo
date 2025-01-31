@@ -1,0 +1,16 @@
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+  }
+  h2 {
+    font-family: 'Montserrat', sans-serif;        
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  body {
+    background-image: url('https://i.ibb.co/nLCK5NX/joshualome-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
