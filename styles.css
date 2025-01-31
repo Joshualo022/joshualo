@@ -8,6 +8,10 @@ h1 {
     letter-spacing: 3px;
     text-transform: uppercase;
   }
+    h3 {
+        font-family: 'Rockwell', 'Times New Roman', serif;
+        font-size: 24px;
+    }
   body {
     background-image: url('https://i.ibb.co/nLCK5NX/joshualome-bg.png');
     background-size: cover;
