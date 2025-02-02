@@ -57,8 +57,159 @@
             <h1 class="mb-5">Explore Acct4</h1>
             
             <img src="https://i.ibb.co/XxTywFRq/portfolioacct4cover.png" class="card-img-top fade-in-bot" alt="Project 1">
-            <p class="mt-5">Acct4 is a website based attendance system that uses QR code technology...</p>
+            <p class="my-5">Acct4 is a website based attendance system that uses QR code technology. This website is extremely customizable
+              yet easy to use. 
+            </p>
+            <div class="row">
+              <div class="col-6">
+                <h2>Skills Used</h2>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Python</li>
+                  <li>Flask (login, forms, db, etc.)</li>
+                  <li>SQLAlchemy</li>
+                  <li>Bootstrap</li>
+                  <li>OpenCV</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <h2>Features</h2>
+                <ul>
+                  <li>QR Code webcam scanner</li>
+                  <li>Attendance Tracking by date</li>
+                  <li>Customizable members and tags</li>
+                  <li>QR Code generation</li>
+                  <li>Email reminders</li>
+                </ul>
+              </div>
+              <hr>
+              <h1 class="mb-3">Code Side-by-side</h1>
+              <hr>
+              <div class="row mb-5">
+                <div class="col-12 col-lg-6 mb-4">
+                  <h2>Feature</h2>
+                  <h1>Create Account</h1>
+                  <img class="img-fluid" src="https://i.ibb.co/5gFTTzjL/codesbs-acct4-login.png" alt="Frontend" width="100%">
+                </div>
+                <div class="col-12 col-lg-6 text-start">
+                  <h2>Code snippet</h2>
+                    <code style="color:#85c5e2ff"><pre>
+&lt;div class='row justify-content-center'&gt;
+&lt;form method="POST" class="text-center pt-4" style="width: 100%;"&gt;
+  &lt;h3&gt;Login&lt;/h3&gt;
+  {{ form.hidden_tag() }}
+  {% if not current_user.is_authenticated %}
+  &lt;div class="form-group" style="width: 100%;"&gt;
+    {{ form.username(class_="acct-input mt-2") }}
+  &lt;/div&gt;
+  {% endif %}
+  &lt;div class="form-group" style="width: 100%;"&gt;
+    &lt;p style="margin-top:2%;"&gt;&lt;/p&gt;
+    {{ form.password(class_="acct-input mt-2") }}
+  &lt;/div&gt;
+  &lt;div class="form-group mr-auto"&gt;
+    &lt;p style="margin-top:11%;"&gt;&lt;/p&gt;
+    {% if not current_user.is_authenticated %}
+    {{ form.lgf_submit(class_="btn btn-success ds", style="border-radius: 10px; height:70%; width:80%; ") }}
+    {% else %}
+    {{ form.verify(class_="btn btn-warning ds", style="border-radius: 10px; height:70%; width:80%; ") }}
+    {% endif %}
+    &lt;p style="margin-top:11%;"&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+                    </pre></code>
+                </div>
+                <hr>
+              </div>
+              <div class="row  mb-5">
+                <div class="col-12 col-lg-6 mb-4">
+                  <h2>Feature</h2>
+                  <h1>QR Processing</h1>
+                  <img class="img-fluid" src="https://i.ibb.co/5x53SpVh/codesbs-acct4-opencv.png" alt="Frontend" width="100%">
+                </div>
+                <div class="col-12 col-lg-6 text-start">
+                  <h2>Code snippet</h2>
+                  <code><pre style="color:#85c5e2ff">
+@app.route('/upload_frame', methods=['POST'])
+def upload_frame():
+    data = request.json
+    frame_data = data['frame'].split(',')[1]
+    frame_bytes = base64.b64decode(frame_data)
+    np_arr = np.frombuffer(frame_bytes, np.uint8)
+    frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+    check_in_time = data['time']
+    check_in_date = data['date']
+    scan_mode = data['scan_mode']
+    response = decode_frame(frame, check_in_time, check_in_date, scan_mode)
+    if response != None:
+        member_id = response[0]
+        action = response[1]
+        return jsonify({"member_id": member_id, "action": action})
+    else:
+        return "None"
+                  </pre>
+
+                  </code>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col-12 col-lg-6 mb-4">
+                  <h2>Feature</h2>
+                  <h1>Database</h1>
+                  <img class="img-fluid" src="https://i.ibb.co/wZ8xBpmZ/codesbs-acct4-db.png" alt="Frontend" width="100%">
+                </div>
+                <div class="col-12 col-lg-6 text-start">
+                  <h2>Code snippet</h2>
+                  <code style="color:#85c5e2ff"><pre>                    
+class Members(db.Model):
+__tablename__ = "Members"
+id = db.Column(db.Integer, primary_key=True)
+username = db.Column(db.String)
+member_id = db.Column(db.Integer)
+name = db.Column(db.String)
+email = db.Column(db.String)
+planning_period = db.Column(db.String)
+tags = db.Column(db.String)
+                  </pre>
+                    
+                  </code>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col-12 col-lg-6 mb-4">
+                  <h2>Feature</h2>
+                  <h1>Customization</h1>
+                  <img class="img-fluid" src="https://i.ibb.co/fVh2GYp8/codesbs-acct4-custom.png" alt="Frontend" width="100%">
+                </div>
+                <div class="col-12 col-lg-6 text-start">
+                  <h2>Code snippet</h2>
+                  <code style="color:#85c5e2ff;"><pre>
+if addtagform.atf_submit.data and addtagform.validate():
+my_tags = Tags.query.filter_by(username=flask_login.current_user.username).all()
+tag_names = [tag.name for tag in my_tags]
+temp_name = addtagform.tag.data
+if temp_name in tag_names:
+    suffix_num = 1
+    temp_name = temp_name + str(suffix_num)
+    while temp_name in tag_names:
+        suffix_num += 1
+        temp_name = temp_name[0:-1]
+        temp_name = temp_name + str(suffix_num)
+new_tag = Tags(username=flask_login.current_user.username, name=temp_name, color = addtagform.color.da
+db.session.add(new_tag)
+db.session.commit()
+return refresh('tags')
+                  </pre>
+                  </code>
+                </div>
+              </div>
+
+
             </div>
+          </div>
     </div>
 
     
