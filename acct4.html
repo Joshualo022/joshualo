@@ -90,8 +90,12 @@
               <div class="row mb-5">
                 <div class="col-12 col-lg-6 mb-4">
                   <h2>Feature</h2>
-                  <h1>Create Account</h1>
+                  <h1>Create Account</h1>                  
                   <img class="img-fluid" src="https://i.ibb.co/5gFTTzjL/codesbs-acct4-login.png" alt="Frontend" width="100%">
+                  <p class="mt-3">
+                    Acct4 allows users to create an account on the website so that they can save their attendance data and custom setup.
+                    This is done using Flask's login system and forms. By saving their data, users can easily save their added members, tags, and more.
+                  </p>
                 </div>
                 <div class="col-12 col-lg-6 text-start">
                   <h2>Code snippet</h2>
@@ -129,6 +133,11 @@
                   <h2>Feature</h2>
                   <h1>QR Processing</h1>
                   <img class="img-fluid" src="https://i.ibb.co/5x53SpVh/codesbs-acct4-opencv.png" alt="Frontend" width="100%">
+                  <p class="mt-3">
+                    This feature is the heart of the Acct4 website. With one simple scan, the server will quickly process your personal QR code to figure out
+                    who you are! This is done using OpenCV's image processing and python. Javascript is also utilized to send the 
+                    image data to the server and respond accordingly.
+                  </p>
                 </div>
                 <div class="col-12 col-lg-6 text-start">
                   <h2>Code snippet</h2>
@@ -160,6 +169,11 @@ def upload_frame():
                   <h2>Feature</h2>
                   <h1>Database</h1>
                   <img class="img-fluid" src="https://i.ibb.co/wZ8xBpmZ/codesbs-acct4-db.png" alt="Frontend" width="100%">
+                  <p class="mt-3">
+                    Acct4 uses SQLAlchemy to manage its database. This allows for easy access to the database and quick setup.
+                    The members table in this example has multiple attributes that are customizable by the user and stores 8 digit ids to identify 
+                    each member.
+                  </p>
                 </div>
                 <div class="col-12 col-lg-6 text-start">
                   <h2>Code snippet</h2>
@@ -183,6 +197,12 @@ tags = db.Column(db.String)
                   <h2>Feature</h2>
                   <h1>Customization</h1>
                   <img class="img-fluid" src="https://i.ibb.co/fVh2GYp8/codesbs-acct4-custom.png" alt="Frontend" width="100%">
+                  <p class="mt-3">
+                    With a goal to make this website accessible and useful for all groups, Acct4 allows users to customize their experience. The Tags feature allows for  short descriptions
+                    to be added to members. This image shows an example of how a school may customize their tags to include subjects and planning periods.
+              
+            
+                  </p>
                 </div>
                 <div class="col-12 col-lg-6 text-start">
                   <h2>Code snippet</h2>
@@ -209,23 +229,28 @@ return refresh('tags')
 
 
             </div>
-          </div>
+            <hr>
+            <h1>You made it to the end! Check out the full project here:</h1>
+            <a href="https://www.acct4.net" class="btn btn-fill my-3 text-black">Visit Acct4 ></a>
+            <p>OR Take me to another project:</p>
+            <a href="projects.html" class="btn btn-fill text-black">Back to Projects <</a>
+          </div>          
     </div>
+    
 
     
     <div class="container-fluid text-center bg-white p-5" id="contact">
       
-        <h1>Contact</h1>
-        <div class="row">
-          <div class="col-3">
-            <a href="mailto:joshualo1247220@gmail.com"></a>
-              <img src="https://i.ibb.co/t2p0MsB/caliggmail.png" alt="Email" width="50" height="50">
-            </a>
-          </div>
-          <p style="margin-top:10%;"></p>
-        </div>
-  
+      <h1 class="mb-5">Contact</h1>
+      <div class="row text-center">
+        <h2>Email</h2>
+        <p>joshualo1247220@gmail.com</p>
+        <h2>Instagram</h2>
+        <p>@joshuajjlo</p>
+        <p style="margin-top:3%;"></p>
       </div>
+
+    </div>
 
   
 </body>
